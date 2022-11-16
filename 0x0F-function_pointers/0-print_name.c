@@ -1,12 +1,13 @@
 /**
- * print_name- functiont tp print name
+ * print_name- functiont to print name
  *
  * @name: name to be printed
- * @f: functio used in printing
+ * @f: function used in printing
  * Return: void
  */
 
 void print_name(char *name, void (*f)(char *))
 {
-	f(name);
+	if (name && f)
+		f(name);
 }
